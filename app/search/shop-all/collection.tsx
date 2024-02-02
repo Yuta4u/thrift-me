@@ -21,7 +21,7 @@ const Collection = ({ data }: TCollection) => {
   return (
     <div className="flex flex-wrap gap-5">
       {data?.map((e: TCollectionData) => (
-        <Link href={`./${e.jenis}/${e.code}`}>
+        <Link key={e.nama} href={`./${e.jenis}/${e.code}`}>
           <div
             key={e.nama}
             className="relative w-80 h-80 font-bold hover:cursor-pointer bg-neutral-950 border border-neutral-500 rounded-lg"
