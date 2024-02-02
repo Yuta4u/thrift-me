@@ -1,6 +1,6 @@
 "use client"
 
-const sideNavLeft = () => {
+const SideNavRight = () => {
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 767.98
   const nav = [
     {
@@ -34,4 +34,4 @@ const sideNavLeft = () => {
   )
 }
 
-export default sideNavLeft
+export default SideNavRight

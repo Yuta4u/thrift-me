@@ -5,7 +5,7 @@ import { Input } from "./ui/input"
 import { Box } from "@radix-ui/themes"
 import { useState, useEffect } from "react"
 
-const mainNav = () => {
+const MainNav = () => {
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 767.98
   const [scrolling, setScrolling] = useState(false)
 
@@ -88,4 +88,4 @@ const mainNav = () => {
   )
 }
 
-export default mainNav
+export default MainNav

@@ -9,7 +9,7 @@ type THoodie = {
   jenis: string
 }
 
-const hoodiePage = () => {
+const HoodiePage = () => {
   const { data } = useQuery({
     queryKey: "collection",
     queryFn: () => axios.get("/api/collections"),
@@ -33,4 +33,4 @@ const hoodiePage = () => {
   }
 }
 
-export default hoodiePage
+export default HoodiePage

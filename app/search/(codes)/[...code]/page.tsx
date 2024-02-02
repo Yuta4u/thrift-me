@@ -14,7 +14,7 @@ type TCollectionData = {
 type TAllDatas = {
   data: TCollectionData[]
 }
-const detailPage: FC<TPageProps> = ({ params }) => {
+const DetailPage: FC<TPageProps> = ({ params }) => {
   const queryClient = useQueryClient()
   const temp: TAllDatas | undefined = queryClient.getQueryData("collection")
   const detailData =
@@ -23,4 +23,4 @@ const detailPage: FC<TPageProps> = ({ params }) => {
   return <div className="bg-slate-200">INI DETAIL</div>
 }
 
-export default detailPage
+export default DetailPage

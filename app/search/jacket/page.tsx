@@ -9,7 +9,7 @@ type TJaket = {
   jenis: string
 }
 
-const jacketPage = () => {
+const JacketPage = () => {
   const { data } = useQuery({
     queryKey: "collection",
     queryFn: () => axios.get("/api/collections"),
@@ -33,4 +33,4 @@ const jacketPage = () => {
   }
 }
 
-export default jacketPage
+export default JacketPage

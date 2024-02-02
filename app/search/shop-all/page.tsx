@@ -5,7 +5,7 @@ import axios from "axios"
 import dynamic from "next/dynamic"
 const Collection = dynamic(() => import("./collection"))
 
-const shopAllPage = () => {
+const ShopAllPage = () => {
   const { data } = useQuery({
     queryKey: "collection",
     queryFn: () => axios.get("/api/collections"),
@@ -19,4 +19,4 @@ const shopAllPage = () => {
   }
 }
 
-export default shopAllPage
+export default ShopAllPage

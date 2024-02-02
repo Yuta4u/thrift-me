@@ -8,7 +8,7 @@ type TSweater = {
   jenis: string
 }
 
-const sweaterPage = () => {
+const SweaterPage = () => {
   const { data } = useQuery({
     queryKey: "collection",
     queryFn: () => axios.get("/api/collections"),
@@ -20,7 +20,7 @@ const sweaterPage = () => {
     (jaket: TSweater) => jaket.jenis === "sweater"
   )
 
-  if (!sweaterPage) {
+  if (!SweaterPage) {
     return <>Loading...</>
   } else {
     return (
@@ -32,4 +32,4 @@ const sweaterPage = () => {
   }
 }
 
-export default sweaterPage
+export default SweaterPage
