@@ -14,7 +14,7 @@ const SideNavLeft = () => {
       link: "shop-all",
     },
     {
-      link: "hoodie",
+      link: "sweater",
     },
   ]
   return (
