@@ -1,0 +1,15 @@
+-- CreateTable
+CREATE TABLE `Collection` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `code` VARCHAR(3) NOT NULL,
+    `nama` VARCHAR(255) NOT NULL,
+    `size` VARCHAR(4) NOT NULL,
+    `jenis` VARCHAR(15) NOT NULL,
+    `imgUrl` TEXT NOT NULL,
+    `harga` INTEGER NOT NULL,
+    `status` ENUM('AVAILABLE', 'NOT_AVAILABLE') NOT NULL DEFAULT 'AVAILABLE',
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

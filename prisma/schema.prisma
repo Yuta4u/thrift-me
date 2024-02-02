@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Collection {
+  id        Int      @id @default(autoincrement())
+  code      String   @db.VarChar(3)
+  nama      String   @db.VarChar(255)
+  size      String   @db.VarChar(4)
+  jenis     String   @db.VarChar(15)
+  imgUrl    String   @db.Text
+  harga     Int      @db.Int()
+  status    Status   @default(AVAILABLE)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Status {
+  AVAILABLE
+  NOT_AVAILABLE
+}
